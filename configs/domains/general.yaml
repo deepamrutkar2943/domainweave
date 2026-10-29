@@ -1,0 +1,29 @@
+# DomainWeave — General-purpose domain configuration
+# This domain has no business-specific constraints and is used for
+# development, testing, and as a reference for new domain authors.
+
+domain_id: general
+version: "1.0"
+display_name: "General Purpose"
+description: "Unrestricted domain for development and testing."
+
+# Model profiles this domain is allowed to use.
+# Values must match registered profile names in the Model Gateway.
+permitted_model_profiles:
+  - classification
+  - general_response
+
+# Capabilities enabled for this domain.
+# Empty list = no tools available yet; populated in Milestone 4.
+enabled_capabilities: []
+
+# Knowledge collections available to this domain.
+# Empty list = no RAG sources yet; populated in Milestone 5.
+knowledge_collections: []
+
+# Domain-level policy overrides.
+# All omitted keys fall back to platform defaults.
+policies:
+  max_tool_calls_per_run: 5
+  require_citations: false
+  allow_multi_step: false
